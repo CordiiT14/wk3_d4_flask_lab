@@ -1,0 +1,32 @@
+body {
+    background-color: #F4F1DE;
+    margin:0;
+}
+
+header {
+    background-color: #E07A5F;
+    text-align: center;
+    padding: 5px;
+
+}
+
+footer {
+    background-color: #E07A5F;
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+  width: 250px;
+   
+}

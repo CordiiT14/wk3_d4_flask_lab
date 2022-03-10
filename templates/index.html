@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Our Events</h1>
 
+<div class="container">
 {% for event in event_list %}
-<div>
-    <h2>{{event.event_name}}</h2>
-    <h3>{{event.date}} | {{event.room_location}}</h3>
-    <p>{{event.description}} </p>
-    <p>Number of guests attending: {{event.number_guests}}</p>
-    <p>Recurring Event: {{event.recurring}}</p>
-    {% if event.recurring %} 
-        <p>This is a recurring event.</p>
-    {% endif %}
-</div>
+    <div class="card">
+        <h2>{{event.event_name}}</h2>
+        <h3>{{event.date}} | {{event.room_location}}</h3>
+        <p>{{event.description}} </p>
+        <p>Number of guests attending: {{event.number_guests}}</p>
+        <p>Recurring Event: {{event.recurring}}</p>
+        {% if event.recurring %} 
+            <p>This is a recurring event.</p>
+        {% endif %}
+    </div>
 
 {% endfor %}
+</div>
 
 <h2>Add New Event</h2>
 <form action="/events" method="post">
