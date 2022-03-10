@@ -8,6 +8,10 @@
     <h3>{{event.date}} | {{event.room_location}}</h3>
     <p>{{event.description}} </p>
     <p>Number of guests attending: {{event.number_guests}}</p>
+    <p>Recurring Event: {{event.recurring}}</p>
+    {% if event.recurring %} 
+        <p>This is a recurring event.</p>
+    {% endif %}
 </div>
 
 {% endfor %}
@@ -24,10 +28,21 @@
     <input type="number" name="number_guests" id="number_guests" min="1" max="100">
     <label for="description">Description</label>
     <textarea name="description" rows="5" cols="30"></textarea>
-    <label for="recurring"> Recurring Event</label>
-    <input type="checkbox" name="recurring" id="recurring" value="True">
+
     
+    <p>Recurring Event</p>
+    <div>
+        <input type="radio" id="True"
+     name="recurring" value="True">
+    <label for="True">Yes</label>
+
+    <input type="radio" id="False"
+     name="recurring" value="False" checked>
+    <label for="False">No</label>
+    </div>
+
     <input type="submit" value="Add Event">
 </form>
 
 {% endblock %}
+

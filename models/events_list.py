@@ -8,5 +8,4 @@ event_list = [event1,]
 def add_new_event(event):
     event_list.append(event)
 
-# def recurring_event(recurring):
-#     if recurring == 
+
