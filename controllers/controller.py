@@ -17,4 +17,5 @@ def add_event():
     recurring = request.form['recurring']
     new_event = Event(date, event_name, number_guests, room_location, description, recurring)
     add_new_event(new_event)
+    print(recurring)
     return render_template('index.html', title="Home", event_list=event_list)
